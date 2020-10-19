@@ -1,0 +1,30 @@
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: #ffb6c1;
+	transition-property: all;
+	transition-duration: 1s;
+	float: left;
+	transform: scale(1,1);
+	
+	animation: opacityToZero;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+}
+
+.box:hover {
+	transform: rotate(360deg);
+	transform: scale(0.5,0.5);
+	animation-play-state: running;
+}
+
+@keyframes opacityToZero {
+
+	0% {
+		opacity: 1
+	}
+	100%{ 
+		opacity: 0 
+	}
+}
